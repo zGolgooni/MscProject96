@@ -1,0 +1,22 @@
+->number of thresholds for arrhythmic = 3
+
+--->Result for data = total , samples (25 Arrhythmic, 98 Normal)
+		tp = 20.000000, tn = 94.000000, fp = 4.000000, fn = 5.000000, total-> 0.926829
+
+--->Result for data = train , samples (20 Arrhythmic, 79 Normal)
+		tp = 16.000000, tn = 75.000000, fp = 4.000000, fn = 4.000000, total-> 0.919192
+
+--->Result for data = test , samples (5 Arrhythmic, 19 Normal)
+		tp = 4.000000, tn = 19.000000, fp = 0.000000, fn = 1.000000, total-> 0.958333
+--->Result for data = test , samples (5 Arrhythmic, 19 Normal)
+		tp = 3.000000, tn = 18.000000, fp = 1.000000, fn = 2.000000, total-> 0.875000
+
+
+-----------------
+->number of thresholds for arrhythmic = 1
+--->Result for data = total , samples (25 Arrhythmic, 98 Normal)
+		tp = 18.000000, tn = 87.000000, fp = 11.000000, fn = 7.000000, total-> 0.853659
+--->Result for data = train , samples (20 Arrhythmic, 79 Normal)
+		tp = 16.000000, tn = 71.000000, fp = 8.000000, fn = 4.000000, total-> 0.878788
+--->Result for data = test , samples (5 Arrhythmic, 19 Normal)
+		tp = 2.000000, tn = 16.000000, fp = 3.000000, fn = 3.000000, total-> 0.750000
