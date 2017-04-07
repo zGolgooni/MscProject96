@@ -1,0 +1,22 @@
+--->Result for data = train , samples (20 Arrhythmic, 79 Normal)
+		tp = 17.000000, tn = 53.000000, fp = 26.000000, fn = 3.000000, total-> 0.707071, positive accuracy-> 0.850000
+--->Result for data = test , samples (5 Arrhythmic, 19 Normal)
+		tp = 3.000000, tn = 10.000000, fp = 9.000000, fn = 2.000000, total-> 0.541667, positive accuracy-> 0.600000
+--->Result for data = total , samples (25 Arrhythmic, 98 Normal)
+		tp = 20.000000, tn = 63.000000, fp = 35.000000, fn = 5.000000, total-> 0.674797, positive accuracy-> 0.800000
+----------------------------------------
+--->Result for data = train , samples (20 Arrhythmic, 79 Normal)
+		tp = 17.000000, tn = 29.000000, fp = 50.000000, fn = 3.000000, total-> 0.464646, positive accuracy-> 0.850000
+--->Result for data = test , samples (5 Arrhythmic, 19 Normal)
+		tp = 3.000000, tn = 12.000000, fp = 7.000000, fn = 2.000000, total-> 0.625000, positive accuracy-> 0.600000
+--->Result for data = total , samples (25 Arrhythmic, 98 Normal)
+		tp = 20.000000, tn = 41.000000, fp = 57.000000, fn = 5.000000, total-> 0.495935, positive accuracy-> 0.800000
+----------------------------------------
+---->>>>>> with preprocess (smoothing)
+
+--->Result for data = train , samples (20 Arrhythmic, 79 Normal)
+		tp = 14.000000, tn = 55.000000, fp = 24.000000, fn = 6.000000, total-> 0.696970, positive accuracy-> 0.700000
+--->Result for data = test , samples (5 Arrhythmic, 19 Normal)
+		tp = 5.000000, tn = 11.000000, fp = 8.000000, fn = 0.000000, total-> 0.666667, positive accuracy-> 1.000000
+--->Result for data = total , samples (25 Arrhythmic, 98 Normal)
+		tp = 19.000000, tn = 66.000000, fp = 32.000000, fn = 6.000000, total-> 0.691057, positive accuracy-> 0.760000
