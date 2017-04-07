@@ -23,8 +23,7 @@ train_samples, test_samples = split_samples(main_file, main_path, fraction)
 '''
 Classify samples
 sequence of raw time series
-4 sec ~ 4 rpeaks
-each sec about 500 point
+each entry refers to 5 peaks and related handy features of them, about 15 feature( base and each peak)
 '''
 
 total_rpeaks = 40
