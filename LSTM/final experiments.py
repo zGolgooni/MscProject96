@@ -6,6 +6,7 @@ from keras.models import Sequential
 from keras.layers.core import Dense
 from keras.layers import LSTM
 from keras.layers.core import Dense, Dropout, Activation
+
 from prepare_data33 import load_file, load_sample, split_samples #, print_globals,reset_globals
 
 
@@ -169,24 +170,25 @@ classification_threshold = [1,2,3]
 #each_points = [400,500,600,800,1000]
 rpeaks = 4
 each_points = 500
-input_dimension = [500,250,100,80,50]
+input_dimension = [50,80,100,250,500]
+
 
 with open('Results_960126.csv', 'w') as csvfile:
     fieldnames = ['model #LSTM hidden node','model #batch','model #epoch', 'classification threshold','data #rpeaks #each points','data input dimension','test total_acc','train total_acc','test positive_acc','train positive_acc','train/test data','test-fp', 'test-fn','test-tp', 'test-tn', 'train-fp','train-fn','train-tp', 'train-tn']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     counter = 0
-    for lhn in lstm_hidden_node:
-        print('lstm hidden node = %d' %lhn)
+    for ct in classification_threshold:
+        print('Classification threshold = %d' %ct)
         for id in input_dimension:
             print('input dimension = %d' %id)
             for b in batch:
                 print('batch = %d' %b)
                 for e in epoch:
                     print('Epoch = %d' %e)
-                    for ct in classification_threshold:
+                    for lhn in lstm_hidden_node:
+                        print('lstm hidden node = %d' %lhn)
                         test_total_acc,train_total_acc,test_positive_acc,train_positive_acc,train_test_data,test_fp,test_fn,test_tp,test_tn,train_fp,train_fn,train_tp,train_tn= run_experiment(lhn,b,e,ct,id,rpeaks,each_points)
                         writer.writerow({'model #LSTM hidden node':lhn,'model #batch':b,'model #epoch':e, 'classification threshold':ct,'data #rpeaks #each points':[rpeaks, each_points],'data input dimension':[id],'test total_acc':test_total_acc,'train total_acc': train_total_acc,'test positive_acc': test_positive_acc,'train positive_acc':train_positive_acc,'train/test data':train_test_data,'test-fp':test_fp, 'test-fn':test_fn,'test-tp':test_tp, 'test-tn':test_tn, 'train-fp':train_fp,'train-fn':train_fn,'train-tp':train_tp, 'train-tn':train_tn})
-                        print('Classification threshold = %d' %ct)
                         counter += 1
                         print('oooooooooooh   %d ohhhhhhhhhhhh' %counter)
