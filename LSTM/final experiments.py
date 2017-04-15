@@ -7,7 +7,7 @@ from keras.layers.core import Dense
 from keras.layers import LSTM
 from keras.layers.core import Dense, Dropout, Activation
 
-from prepare_data33 import load_file, load_sample, split_samples #, print_globals,reset_globals
+from prepare_data import load_file, load_sample, split_samples #, print_globals,reset_globals
 
 
 def run_experiment(lstm_hidden_node,batch,epoch,classification_threshold,input_dimension,rpeaks,each_points):
