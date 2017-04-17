@@ -36,8 +36,8 @@ for run in range(0, num_experiments):
     #specify dimension of features considering approach of work
 
 
-    features_dim1 = 1
-    features_dim2 = 2000
+    features_dim1 = 20
+    features_dim2 = 100
 
     train_x = np.empty((0, features_dim1, features_dim2))
     train_y = np.empty((0, 2))
@@ -50,11 +50,11 @@ for run in range(0, num_experiments):
 
 
     nb_filter = 20
-    filter_length = 50
+    filter_length = 40
 
-    lstm_nb_hidden = 15
+    lstm_nb_hidden = 20
 
-    batch_size = 20
+    batch_size = 100
     epochs = 70
 
     print('Build model...')
