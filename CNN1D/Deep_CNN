@@ -56,14 +56,14 @@ for run in range(0, num_experiments):
     train_x = np.reshape(train_x,[train_x.shape[0], features_dim2, features_dim1])
 
 
-    nb_filter = 25
-    filter_length = 40
+    nb_filter = 20
+    filter_length = 25
 
     nb_filter2 = 10
-    filter_length2 = 20
+    filter_length2 = 10
 
-    batch_size = 20
-    epochs = 70
+    batch_size = 50
+    epochs = 50
 
     print('Build model...')
     model = Sequential()
