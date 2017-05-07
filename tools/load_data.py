@@ -8,12 +8,14 @@ from biosppy.signals.tools import smoother
 
 min_range = -50
 max_range = 50
+total_length = 60
 
 
-def read_sample(path, name, preprocess=False):
-    dataset = pandas.read_csv(path + name + '.txt', delimiter='\t', skiprows=4, skipfooter=1)
-    x_signal = dataset.values[:, 0]
-    y = dataset.values[:, 1]
+def read_sample(path, name,sampling_rate, preprocess=True):
+    dataset = pandas.read_csv(path + name + '.txt', delimiter='\t', skiprows=4, skipfooter=1,engine='python')
+    x_signal = dataset.values[:total_length * sampling_rate, 0]
+    y = dataset.values[:total_length * sampling_rate, 1]
+
     y_signal = normalize_data(pandas.DataFrame(y), max_range, min_range)
     if preprocess is True:
         smoothed_signal, params = smoother(y_signal[:,0])
